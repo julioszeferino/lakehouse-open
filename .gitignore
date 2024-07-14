@@ -1,6 +1,7 @@
 storage/data/
 storage/success/
 storage/warehouse/
+storage/notebook/
 storage/hiveserver_logs/
 airflow/logs/
 

@@ -1,0 +1,5 @@
+numpy==1.24.0
+pandas==1.5.2
+pyspark==3.4.1
+py4j
+mkdocs
