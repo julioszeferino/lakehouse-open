@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Referencia: https://apache.github.io/hadoop/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml -->
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+  <property>
+    <name>dfs.namenode.name.dir</name>
+    <value>/opt/hadoop/data/nameNode</value>
+    <description>Diretorio padrao do namenode.</description>
+  </property>
+  <property>
+    <name>dfs.datanode.data.dir</name>
+    <value>/opt/hadoop/data/dataNode</value>
+    <description>Diretorio padrao do datanode.</description>
+  </property>
+  <property>
+    <name>dfs.replication</name>
+    <value>2</value>
+    <description>Fator de replicacao para os arquivos.</description>
+  </property>
+  <property>
+    <name>dfs.permissions.enabled</name>
+    <value>false</value>
+    <description>Desabilitar Permissoes.</description>
+  </property>
+  <property>
+		 <name>dfs.webhdfs.enabled</name>
+		 <value>true</value>
+	</property>
+  <property>
+    <name>dfs.namenode.http-address</name>
+    <value>spark-master:14000</value>
+  </property>
+</configuration>

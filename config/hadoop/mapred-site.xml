@@ -1,0 +1,59 @@
+<configuration>
+  <property>
+    <name>mapreduce.framework.name</name>
+    <value>yarn</value>
+    <description>
+      Define o YARN como o framework para execução 
+      de tarefas MapReduce.
+    </description>
+  </property>
+  <property>
+    <name>yarn.app.mapreduce.am.env</name>
+    <value>HADOOP_MAPRED_HOME=$HADOOP_HOME</value>
+    <description>
+      Especifica o diretório de instalação 
+      do Hadoop para o Application Master 
+      do MapReduce.
+    </description>
+  </property>
+  <property>
+    <name>mapreduce.map.env</name>
+    <value>HADOOP_MAPRED_HOME=$HADOOP_HOME</value>
+    <description>
+      Especifica o diretório de instalação do Hadoop 
+      para as tarefas de mapeamento (Map).
+    </description>
+  </property>
+  <property>
+    <name>mapreduce.reduce.env</name>
+    <value>HADOOP_MAPRED_HOME=$HADOOP_HOME</value>
+    <description>
+      Especifica o diretório de instalação 
+      do Hadoop para as tarefas de redução (Reduce).
+    </description>
+  </property>
+  <property>
+    <name>yarn.app.mapreduce.am.resource.mb</name>
+    <value>1024</value>
+    <description>
+      Define a quantidade de memória (em MB) alocada 
+      para o Application Master do MapReduce.
+    </description>
+  </property>
+  <property>
+    <name>mapreduce.map.memory.mb</name>
+    <value>512</value>
+    <description>
+      Define a quantidade de memória (em MB) alocada 
+      para cada tarefa de mapeamento (Map).
+    </description>
+  </property>
+  <property>
+    <name>mapreduce.reduce.memory.mb</name>
+    <value>512</value>
+    <description>
+      Define a quantidade de memória (em MB) alocada 
+      para cada tarefa de redução (Reduce).
+    </description>
+  </property>
+</configuration>

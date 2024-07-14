@@ -1,0 +1,60 @@
+<configuration>
+   <property>
+      <name>javax.jdo.option.ConnectionURL</name>
+      <value>jdbc:postgresql://metadatadb:5432/hivemetastore?createDatabaseIfNotExist=true</value>
+      <description>JDBC connect string for a JDBC metastore</description>
+   </property>
+   <property>
+      <name>javax.jdo.option.ConnectionDriverName</name>
+      <value>org.postgresql.Driver</value>
+      <description>Driver class name for a JDBC metastore</description>
+   </property>
+   <property>
+      <name>javax.jdo.option.ConnectionUserName</name>
+      <value>hiveuser</value>
+      <description>Username to use against metastore database</description>
+   </property>
+   <property>
+      <name>javax.jdo.option.ConnectionPassword</name>
+      <value>hiveuser</value>
+      <description>Password to use against metastore database</description>
+   </property>
+   <property>
+      <name>datanucleus.autoCreateSchema</name>
+      <value>true</value>
+   </property>
+   <property>
+      <name>datanucleus.fixedDatastore</name>
+      <value>true</value>
+   </property>
+   <property>
+      <name>datanucleus.autoCreateTables</name>
+      <value>True</value>
+   </property>
+   <property>
+      <name>hive.metastore.warehouse.dir</name>
+      <value>/user/hive/warehouse</value>
+   </property>
+   <property>
+      <name>hive.server2.thrift.bind.host</name>
+      <value>0.0.0.0</value>
+      <description>Host para o HiveServer2 bind.</description>
+   </property>
+   <property>
+      <name>hive.server2.thrift.port</name>
+      <value>10000</value>
+      <description>Porta para o HiveServer2.</description>
+   </property>
+   <property>
+      <name>hive.server2.authentication</name>
+      <value>NONE</value>
+      <description>Autenticação para o HiveServer2. Pode ser NONE, NOSASL, LDAP, KERBEROS, CUSTOM ou
+         PAM.</description>
+   </property>
+   <property>
+      <name>hive.server2.enable.doAs</name>
+      <value>false</value>
+      <description>Se verdadeiro, os usuários executarão suas consultas com seus próprios
+         privilégios.</description>
+   </property>
+</configuration>

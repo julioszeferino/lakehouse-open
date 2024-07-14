@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!-- Referencia: https://apache.github.io/hadoop/hadoop-yarn/hadoop-yarn-common/yarn-default.xml -->
+<configuration>
+  <property>
+    <name>yarn.resourcemanager.hostname</name>
+    <value>spark-master</value>
+    <description>
+        Define o nome do host ou endereço IP onde o 
+        ResourceManager do YARN está em execução.
+    </description>
+  </property>
+  <property>
+    <name>yarn.nodemanager.resource.cpu-vcores</name>
+    <value>2</value>
+    <description>
+        Especifica o número de vCores disponíveis 
+        para cada datanode.
+    </description>
+  </property>
+  <property>
+    <name>yarn.resourcemanager.bind-host</name>
+    <value>0.0.0.0</value>
+    <description>
+        Configura o ResourceManager para aceitar 
+        conexões de qualquer endereço IP.
+    </description>
+  </property>
+  <property>
+    <name>yarn.nodemanager.aux-services</name>
+    <value>mapreduce_shuffle</value>
+    <description>
+        Define serviços auxiliares executados no NodeManager, 
+        incluindo o serviço mapreduce_shuffle.
+    </description>
+  </property>
+  <property>
+    <name>yarn.nodemanager.resource.memory-mb</name>
+    <value>2048</value>
+    <description>
+        Especifica a quantidade total de memória 
+        disponível (em MB) para o NodeManager (datanode).
+    </description>
+  </property>
+  <property>
+    <name>yarn.scheduler.maximum-allocation-mb</name>
+    <value>2048</value>
+    <description>
+        Define a quantidade máxima de memória (em MB) 
+        que pode ser alocada para qualquer contêiner no YARN. 
+        Isso significa que nenhum contêiner individual pode solicitar 
+        mais do que essa quantidade de memória. No YARN, um contêiner é 
+        uma unidade de recurso que encapsula memória e CPU para executar 
+        tarefas específicas de uma aplicação distribuída, garantindo isolamento 
+        e gerenciamento eficiente dos recursos do cluster
+    </description>
+  </property>
+  <property>
+    <name>yarn.scheduler.minimum-allocation-mb</name>
+    <value>512</value>
+    <description>
+        Define a quantidade mínima de memória (em MB) que pode ser 
+        alocada para qualquer contêiner no YARN.
+    </description>
+  </property>
+  <property>
+    <name>yarn.log-aggregation-enable</name>
+    <value>true</value>
+    <description>
+        Habilita a agregação de logs para reduzir 
+        a carga de logs no HDFS.
+    </description>
+  </property>
+</configuration>

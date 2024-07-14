@@ -1,0 +1,31 @@
+<configuration>
+  <property>
+    <name>yarn.scheduler.capacity.root.queues</name>
+    <value>default</value>
+    <description>
+      Define as filas no nível raiz (root). 
+      Neste caso, há apenas uma fila chamada "default".
+    </description>
+  </property>
+  <property>
+    <name>yarn.scheduler.capacity.root.default.capacity</name>
+    <value>100</value>
+    <description>
+      Capacidade alvo da fila "default". 
+      O valor 100 significa que esta fila tem 100% da capacidade 
+      alocada do total disponível no nível raiz.
+    </description>
+  </property>
+  <property>
+    <name>yarn.scheduler.capacity.resource-calculator</name>
+    <value>org.apache.hadoop.yarn.util.resource.DominantResourceCalculator</value>
+  </property>
+  <description>
+    Implementação do ResourceCalculator a ser usada para comparar 
+    recursos no escalonador. 
+    O `DefaultResourceCalculator` usa apenas a memória para comparar 
+    recursos, enquanto o `DominantResourceCalculator` usa o recurso 
+    dominante para comparar recursos multidimensionais como 
+    Memória, CPU, etc.
+  </description>
+</configuration>
