@@ -1,3 +1,10 @@
+storage/data/
+storage/success/
+storage/warehouse/
+storage/hiveserver_logs/
+airflow/logs/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
